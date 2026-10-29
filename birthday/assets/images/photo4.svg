@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <radialGradient id="galaxy" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#4e1c75"/>
+      <stop offset="40%" stop-color="#290943"/>
+      <stop offset="80%" stop-color="#11031d"/>
+      <stop offset="100%" stop-color="#07000d"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#galaxy)"/>
+  
+  <!-- Starfield -->
+  <g fill="#fff">
+    <circle cx="80" cy="90" r="1.5" opacity="0.9"/>
+    <circle cx="150" cy="180" r="2" opacity="0.8"/>
+    <circle cx="230" cy="70" r="1" opacity="0.7"/>
+    <circle cx="320" cy="140" r="2.5" opacity="0.95"/>
+    <circle cx="450" cy="80" r="1.5" opacity="0.6"/>
+    <circle cx="560" cy="160" r="2" opacity="0.9"/>
+    <circle cx="680" cy="70" r="2.5" opacity="0.8"/>
+    <circle cx="740" cy="150" r="1" opacity="0.7"/>
+    <circle cx="620" cy="230" r="1.8" opacity="0.85"/>
+    <circle cx="190" cy="260" r="2" opacity="0.9"/>
+    <circle cx="280" cy="220" r="1.2" opacity="0.7"/>
+  </g>
+  
+  <!-- Shooting Star Streak -->
+  <path d="M500 60 L 680 130" stroke="url(#galaxy)" stroke-width="2"/>
+  <line x1="450" y1="50" x2="620" y2="110" stroke="#fff" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
+  <line x1="530" y1="80" x2="620" y2="110" stroke="#ff85c0" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+  
+  <!-- Big Crescent Moon -->
+  <path d="M660 120 A 45 45 0 0 0 710 180 A 55 55 0 1 1 660 120 Z" fill="#ffeaa7" filter="drop-shadow(0 0 16px rgba(255,234,167,0.8))"/>
+  
+  <!-- Romantic Hill Silhouette & Couple sitting together -->
+  <path d="M-50 600 Q 300 420 850 600 Z" fill="#0c0214"/>
+  
+  <!-- Couple sitting leaning against each other -->
+  <g fill="#07000d">
+    <!-- Body Left -->
+    <circle cx="380" cy="450" r="15"/>
+    <path d="M365 465 L 395 465 L 400 530 L 360 530 Z"/>
+    <!-- Body Right (leaning) -->
+    <circle cx="408" cy="454" r="14"/>
+    <path d="M395 468 L 420 468 L 425 530 L 390 530 Z"/>
+    <!-- Hair flowing down -->
+    <path d="M414 452 Q 425 470 420 495 Q 412 475 410 458 Z"/>
+  </g>
+  
+  <!-- Star Constellation forming HEART -->
+  <path d="M360 180 L 380 150 L 400 170 L 420 150 L 440 180 L 400 220 Z" fill="none" stroke="#ff758c" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <circle cx="360" cy="180" r="3" fill="#ff758c"/>
+  <circle cx="380" cy="150" r="3" fill="#ff758c"/>
+  <circle cx="400" cy="170" r="3" fill="#ff758c"/>
+  <circle cx="420" cy="150" r="3" fill="#ff758c"/>
+  <circle cx="440" cy="180" r="3" fill="#ff758c"/>
+  <circle cx="400" cy="220" r="3.5" fill="#ffd700"/>
+
+  <text x="400" y="560" font-family="'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="24" fill="#ffd1dc" text-anchor="middle" letter-spacing="3">UNDER A THOUSAND STARS WITH YOU 🌌✨</text>
+</svg>

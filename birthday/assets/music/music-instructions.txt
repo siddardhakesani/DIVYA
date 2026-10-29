@@ -1,0 +1,9 @@
+=== HOW TO ADD YOUR ROMANTIC SONG ===
+
+1. Pick Divya's favorite song or your couple's song (e.g. Ed Sheeran - "Perfect", Taylor Swift - "Lover", or an instrumental melody).
+2. Save or convert it as an MP3 file.
+3. Rename the file to:
+   romantic-song.mp3
+4. Place it right here in this `assets/music/` folder!
+
+Note: If no MP3 file is placed here, the website automatically plays a soothing, built-in romantic chime / piano lullaby created via the Web Audio API, so there is NEVER silence!

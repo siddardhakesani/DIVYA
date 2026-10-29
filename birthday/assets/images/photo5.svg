@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sky5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4a154b"/>
+      <stop offset="50%" stop-color="#8c2472"/>
+      <stop offset="100%" stop-color="#f3558e"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#sky5)"/>
+  
+  <!-- Confetti ribbons & bubbles -->
+  <circle cx="140" cy="120" r="24" fill="rgba(255,255,255,0.15)"/>
+  <circle cx="680" cy="150" r="30" fill="rgba(255,255,255,0.12)"/>
+  <circle cx="220" cy="380" r="18" fill="rgba(255,255,255,0.15)"/>
+  <circle cx="620" cy="410" r="22" fill="rgba(255,255,255,0.12)"/>
+  
+  <!-- Colorful balloons cluster -->
+  <g transform="translate(400, 240)">
+    <!-- String lines -->
+    <path d="M-60 -50 L 0 100" stroke="#ffd1dc" stroke-width="1.5"/>
+    <path d="M0 -70 L 0 100" stroke="#ffd1dc" stroke-width="1.5"/>
+    <path d="M60 -40 L 0 100" stroke="#ffd1dc" stroke-width="1.5"/>
+    
+    <!-- Balloon 1 Pink Heart -->
+    <path d="M-60 -70 C -75 -95 -105 -80 -105 -55 C -105 -35 -60 -10 -60 -10 C -60 -10 -15 -35 -15 -55 C -15 -80 -45 -95 -60 -70 Z" fill="#ff4d88" filter="drop-shadow(0 6px 12px rgba(0,0,0,0.3))"/>
+    <!-- Balloon 2 Gold Circle -->
+    <circle cx="0" cy="-90" r="50" fill="#ffd700" filter="drop-shadow(0 6px 12px rgba(0,0,0,0.3))"/>
+    <!-- Balloon 3 Purple Heart -->
+    <path d="M60 -60 C 45 -85 15 -70 15 -45 C 15 -25 60 0 60 0 C 60 0 105 -25 105 -45 C 105 -70 75 -85 60 -60 Z" fill="#9b59b6" filter="drop-shadow(0 6px 12px rgba(0,0,0,0.3))"/>
+    
+    <!-- Bow tie at strings knot -->
+    <circle cx="0" cy="100" r="6" fill="#fff"/>
+  </g>
+  
+  <text x="400" y="470" font-family="'Dancing Script', cursive, serif" font-size="44" fill="#ffffff" font-weight="bold" text-anchor="middle">Every Laugh With You Is Pure Magic</text>
+  <text x="400" y="530" font-family="'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="22" fill="#ffd1dc" text-anchor="middle" letter-spacing="3">MY FAVORITE SILLY PARTNER IN CRIME 🎈🥰</text>
+</svg>

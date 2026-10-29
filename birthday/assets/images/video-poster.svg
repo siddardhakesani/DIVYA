@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%" height="100%">
+  <defs>
+    <linearGradient id="vGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#19062b"/>
+      <stop offset="50%" stop-color="#461053"/>
+      <stop offset="100%" stop-color="#851e5e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#vGrad)"/>
+  
+  <!-- Film strip borders -->
+  <rect x="0" y="0" width="1280" height="40" fill="#0c0214"/>
+  <rect x="0" y="680" width="1280" height="40" fill="#0c0214"/>
+  <!-- Film Sprockets -->
+  <g fill="#331044">
+    <rect x="50" y="10" width="30" height="20" rx="4"/>
+    <rect x="150" y="10" width="30" height="20" rx="4"/>
+    <rect x="250" y="10" width="30" height="20" rx="4"/>
+    <rect x="350" y="10" width="30" height="20" rx="4"/>
+    <rect x="450" y="10" width="30" height="20" rx="4"/>
+    <rect x="550" y="10" width="30" height="20" rx="4"/>
+    <rect x="650" y="10" width="30" height="20" rx="4"/>
+    <rect x="750" y="10" width="30" height="20" rx="4"/>
+    <rect x="850" y="10" width="30" height="20" rx="4"/>
+    <rect x="950" y="10" width="30" height="20" rx="4"/>
+    <rect x="1050" y="10" width="30" height="20" rx="4"/>
+    <rect x="1150" y="10" width="30" height="20" rx="4"/>
+    
+    <rect x="50" y="690" width="30" height="20" rx="4"/>
+    <rect x="150" y="690" width="30" height="20" rx="4"/>
+    <rect x="250" y="690" width="30" height="20" rx="4"/>
+    <rect x="350" y="690" width="30" height="20" rx="4"/>
+    <rect x="450" y="690" width="30" height="20" rx="4"/>
+    <rect x="550" y="690" width="30" height="20" rx="4"/>
+    <rect x="650" y="690" width="30" height="20" rx="4"/>
+    <rect x="750" y="690" width="30" height="20" rx="4"/>
+    <rect x="850" y="690" width="30" height="20" rx="4"/>
+    <rect x="950" y="690" width="30" height="20" rx="4"/>
+    <rect x="1050" y="690" width="30" height="20" rx="4"/>
+    <rect x="1150" y="690" width="30" height="20" rx="4"/>
+  </g>
+  
+  <!-- Glowing Play Button & Hearts -->
+  <circle cx="640" cy="340" r="75" fill="rgba(255, 77, 136, 0.4)" filter="drop-shadow(0 0 25px #ff4d88)"/>
+  <circle cx="640" cy="340" r="55" fill="#ff4d88"/>
+  <polygon points="625,315 670,340 625,365" fill="#ffffff"/>
+  
+  <text x="640" y="470" font-family="'Dancing Script', cursive, serif" font-size="52" fill="#ffffff" font-weight="bold" text-anchor="middle">Our Journey in Motion</text>
+  <text x="640" y="525" font-family="'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="24" fill="#ffd1dc" text-anchor="middle" letter-spacing="3">PLACE YOUR VIDEO IN: assets/videos/memory-video.mp4 🎥❤️</text>
+</svg>

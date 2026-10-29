@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sky3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#210936"/>
+      <stop offset="60%" stop-color="#491350"/>
+      <stop offset="100%" stop-color="#190426"/>
+    </linearGradient>
+    <radialGradient id="lampGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd56b" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#ff9a3c" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#ff758c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#sky3)"/>
+  
+  <!-- Fairy lights string across top -->
+  <path d="M0 80 Q 200 130 400 90 T 800 100" fill="none" stroke="#77457a" stroke-width="2"/>
+  <circle cx="100" cy="100" r="8" fill="#ffeaa7" filter="drop-shadow(0 0 8px #ffd56b)"/>
+  <circle cx="230" cy="115" r="8" fill="#ffeaa7" filter="drop-shadow(0 0 8px #ffd56b)"/>
+  <circle cx="360" cy="98" r="8" fill="#ffeaa7" filter="drop-shadow(0 0 8px #ffd56b)"/>
+  <circle cx="500" cy="95" r="8" fill="#ffeaa7" filter="drop-shadow(0 0 8px #ffd56b)"/>
+  <circle cx="640" cy="98" r="8" fill="#ffeaa7" filter="drop-shadow(0 0 8px #ffd56b)"/>
+  <circle cx="750" cy="92" r="8" fill="#ffeaa7" filter="drop-shadow(0 0 8px #ffd56b)"/>
+
+  <!-- Table & Lantern -->
+  <ellipse cx="400" cy="460" rx="300" ry="90" fill="#2d0d3f" stroke="#68257d" stroke-width="3"/>
+  <ellipse cx="400" cy="440" rx="280" ry="70" fill="#3a134f"/>
+  
+  <!-- Romantic Candle Lantern -->
+  <circle cx="400" cy="330" r="110" fill="url(#lampGlow)"/>
+  <rect x="375" y="320" width="50" height="80" rx="6" fill="#180326" stroke="#d49b4b" stroke-width="3"/>
+  <rect x="382" y="328" width="36" height="64" rx="3" fill="#ffe699" opacity="0.6"/>
+  <!-- Candle Flame -->
+  <path d="M400 340 Q 393 355 400 365 Q 407 355 400 340 Z" fill="#ff4d4d"/>
+  <path d="M400 345 Q 396 355 400 362 Q 404 355 400 345 Z" fill="#ffea00"/>
+  
+  <!-- Two Coffee Mugs with Heart Steam -->
+  <!-- Mug Left -->
+  <rect x="270" y="390" width="45" height="40" rx="6" fill="#e84393"/>
+  <path d="M270 400 C 255 400 255 420 270 420" fill="none" stroke="#e84393" stroke-width="5"/>
+  <!-- Mug Right -->
+  <rect x="485" y="390" width="45" height="40" rx="6" fill="#6c5ce7"/>
+  <path d="M530 400 C 545 400 545 420 530 420" fill="none" stroke="#6c5ce7" stroke-width="5"/>
+  
+  <!-- Steam forming heart -->
+  <path d="M400 270 C 370 230 330 250 350 280 C 370 300 400 315 400 315 C 400 315 430 300 450 280 C 470 250 430 230 400 270 Z" fill="none" stroke="#ffb8b8" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+
+  <text x="400" y="550" font-family="'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="24" fill="#ffd1dc" text-anchor="middle" letter-spacing="3">COUNTLESS COFFEE DATES &amp; DEEP TALKS ☕💕</text>
+</svg>

@@ -1,0 +1,14 @@
+=== HOW TO ADD YOUR COUPLE PHOTOS ===
+
+1. Pick 6 of your favorite photos of you and Divya.
+2. Rename them to:
+   - photo1.jpg (e.g. The first day / memorable start)
+   - photo2.jpg (e.g. Her radiant smile)
+   - photo3.jpg (e.g. Your favorite coffee date / hangout)
+   - photo4.jpg (e.g. A trip or stargazing moment)
+   - photo5.jpg (e.g. A funny / goofy candid laugh)
+   - photo6.jpg (e.g. Your favorite picture together / forever promise)
+
+3. Place them right here in this `assets/images/` directory!
+
+The website has smart fallback built-in: it will load `photo1.jpg`, `photo2.jpg`, etc., and if a file hasn't been uploaded yet, it gracefully displays the high-res romantic illustrated SVGs (`photo1.svg` - `photo6.svg`)!

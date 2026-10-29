@@ -1,0 +1,10 @@
+=== HOW TO ADD YOUR VIDEO MEMORIES ===
+
+1. Export or save your favorite video clip or montage of you and Divya (from Instagram reels, phone camera, etc.).
+2. Save it as an MP4 file.
+3. Rename the file to:
+   memory-video.mp4
+4. Place it right here in this `assets/videos/` folder!
+
+The video player in index.html is already pre-configured to play `assets/videos/memory-video.mp4`.
+If the video file is not yet present, a romantic video preview card with memory message is displayed gracefully.

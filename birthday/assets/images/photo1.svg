@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sky1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2d0c45"/>
+      <stop offset="35%" stop-color="#79287d"/>
+      <stop offset="70%" stop-color="#ff5e7e"/>
+      <stop offset="100%" stop-color="#ffb199"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="60%" r="30%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="30%" stop-color="#ffe6a2" stop-opacity="0.8"/>
+      <stop offset="70%" stop-color="#ff758c" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#ff758c" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#sky1)"/>
+  <circle cx="400" cy="360" r="140" fill="url(#sun)"/>
+  
+  <!-- Ocean / Horizon -->
+  <path d="M0 450 Q 200 445, 400 450 T 800 450 L 800 600 L 0 600 Z" fill="#1b082b"/>
+  <path d="M0 460 C 200 455, 600 465, 800 460 L 800 463 C 600 468, 200 458, 0 463 Z" fill="#ff758c" opacity="0.4"/>
+  <path d="M150 490 C 300 485, 500 495, 650 490 L 650 492 C 500 497, 300 487, 150 492 Z" fill="#ffd1dc" opacity="0.5"/>
+  
+  <!-- Couple Silhouette holding hands -->
+  <g fill="#12041e">
+    <!-- Hillock -->
+    <path d="M220 600 Q 400 470 580 600 Z"/>
+    <!-- Person Left (Boy) -->
+    <circle cx="370" cy="370" r="18"/>
+    <path d="M352 390 Q 370 388 388 390 L 392 460 L 348 460 Z"/>
+    <!-- Person Right (Divya) -->
+    <circle cx="425" cy="375" r="16"/>
+    <!-- Hair flowing -->
+    <path d="M415 370 C 410 395 445 405 442 425 C 438 415 442 390 436 375 Z"/>
+    <path d="M410 393 Q 425 390 440 393 L 448 460 Q 425 465 402 460 Z"/>
+    <!-- Holding hands connected -->
+    <path d="M382 410 Q 398 425 415 412" stroke="#12041e" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Glowing Heart Floating between them -->
+  <path d="M400 340 C 390 320, 360 325, 360 350 C 360 375, 400 400, 400 400 C 400 400, 440 375, 440 350 C 440 325, 410 320, 400 340 Z" fill="#ff4d88" filter="url(#glow)" transform="scale(0.7) translate(170, 70)"/>
+  
+  <!-- Floating Sparkles -->
+  <circle cx="280" cy="220" r="3" fill="#fff" opacity="0.8"/>
+  <circle cx="520" cy="180" r="4" fill="#ffd1dc" opacity="0.9"/>
+  <circle cx="480" cy="270" r="2" fill="#fff" opacity="0.7"/>
+  <circle cx="330" cy="160" r="2.5" fill="#ffd700" opacity="0.8"/>
+  <circle cx="400" cy="120" r="3.5" fill="#fff" opacity="0.9"/>
+  
+  <text x="400" y="550" font-family="'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="24" fill="#ffd1dc" text-anchor="middle" letter-spacing="3">WHERE OUR STORY BEGAN ✨</text>
+</svg>

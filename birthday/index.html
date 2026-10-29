@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Happy Birthday Divya 💕 | Forever & Always</title>
+  
+  <!-- Favicon / Tab Icon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💖</text></svg>">
+  
+  <!-- Google Fonts: Dancing Script (Cursive), Playfair Display (Serif), Poppins (Clean Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Canvas Confetti CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating Background Hearts & Petals Canvas -->
+  <canvas id="heartCanvas"></canvas>
+
+  <!-- =======================================================================
+       1. ROMANTIC WELCOME SCREEN OVERLAY (PURPLE & PINK ENTRANCE)
+       ======================================================================= -->
+  <div class="welcome-overlay" id="welcomeOverlay">
+    <div class="welcome-particles"></div>
+    <div class="welcome-box">
+      <div class="welcome-avatar">
+        <div class="welcome-avatar-inner">
+          💖
+        </div>
+      </div>
+      <h1 class="welcome-title">For My Divya 💕</h1>
+      <p class="welcome-subtitle">
+        A magical world crafted just for you, celebrating the most beautiful person in my life. Turn up your sound and enter with love. ✨
+      </p>
+      <button class="btn btn-primary" id="enterBtn">
+        <i class="fa-solid fa-sparkles"></i> Open My Birthday Surprise 💖
+      </button>
+      <div class="welcome-note">
+        <i class="fa-solid fa-headphones"></i> Put on earphones for the best experience
+      </div>
+    </div>
+  </div>
+
+  <!-- =======================================================================
+       STICKY TOP NAVIGATION
+       ======================================================================= -->
+  <nav class="top-nav" id="topNav">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand">
+        Divya's Day <span>💕</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#countdown" class="nav-link"><i class="fa-regular fa-clock"></i> Countdown</a></li>
+        <li><a href="#letter" class="nav-link"><i class="fa-regular fa-envelope"></i> Letter</a></li>
+        <li><a href="#cake" class="nav-link"><i class="fa-solid fa-cake-candles"></i> Cake</a></li>
+        <li><a href="#gallery" class="nav-link"><i class="fa-regular fa-images"></i> Memories</a></li>
+        <li><a href="#video" class="nav-link"><i class="fa-solid fa-film"></i> Video</a></li>
+        <li><a href="#gift" class="nav-link"><i class="fa-solid fa-gift"></i> Surprise</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- =======================================================================
+       5. FLOATING BACKGROUND MUSIC WIDGET
+       ======================================================================= -->
+  <div class="floating-music-bar" id="musicPlayerWidget">
+    <div class="vinyl-disc" id="vinylDisc" title="Click to play / pause music">
+      <div class="vinyl-inner"></div>
+    </div>
+    <div class="music-details">
+      <div class="music-title">Ed Sheeran - Perfect 🎵</div>
+      <div class="music-status" id="musicStatus">Tap to Play</div>
+    </div>
+    <div class="music-controls">
+      <button class="music-btn" id="playPauseBtn" aria-label="Play or pause music">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+    <div class="sound-waves" id="soundWaves">
+      <div class="sound-bar"></div>
+      <div class="sound-bar"></div>
+      <div class="sound-bar"></div>
+      <div class="sound-bar"></div>
+    </div>
+    <!-- Local Audio Element with graceful fallback to synthesized romantic melody -->
+    <audio id="bgAudio" src="assets/music/romantic-song.mp3" preload="auto" loop></audio>
+  </div>
+
+  <!-- =======================================================================
+       2. HERO SECTION
+       ======================================================================= -->
+  <header class="hero-section" id="hero">
+    <div class="container hero-content">
+      <div class="hero-crown">👑</div>
+      <div class="hero-subtitle-top">To the Queen of My Heart</div>
+      <h1 class="hero-title glow-text">
+        Happy Birthday, <span>Divya!</span> 🎂✨
+      </h1>
+      <p class="hero-description">
+        Every single day with you is a gift, but today is the most special of all. Here's to your gorgeous smile, your infectious laughter, and every precious moment we share.
+      </p>
+      <div class="hero-cta-group">
+        <a href="#letter" class="btn btn-primary">
+          <i class="fa-solid fa-envelope-open-text"></i> Read Your Letter
+        </a>
+        <a href="#cake" class="btn btn-secondary">
+          <i class="fa-solid fa-cake-candles"></i> Blow the Candles
+        </a>
+        <button class="btn btn-gold" id="sendLoveRainBtn">
+          <i class="fa-solid fa-heart"></i> Shower Love 💖
+        </button>
+      </div>
+      <a href="#countdown" class="scroll-indicator">
+        <span>Scroll Down</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- =======================================================================
+       6. WORKING BIRTHDAY COUNTDOWN TIMER
+       ======================================================================= -->
+  <section class="section-wrapper countdown-section" id="countdown">
+    <div class="container">
+      <div class="glass-card countdown-box">
+        <div class="countdown-header">
+          <span class="section-badge"><i class="fa-solid fa-hourglass-half"></i> Special Moment</span>
+          <h2 class="countdown-title glow-text">Countdown to Divya's Birthday 🎂</h2>
+          <p class="countdown-status" id="countdownStatus">Counting down every second to celebrate your existence...</p>
+        </div>
+
+        <div class="countdown-grid" id="countdownGrid">
+          <div class="time-card">
+            <div class="time-number" id="days">00</div>
+            <div class="time-label">Days</div>
+          </div>
+          <div class="time-card">
+            <div class="time-number" id="hours">00</div>
+            <div class="time-label">Hours</div>
+          </div>
+          <div class="time-card">
+            <div class="time-number" id="minutes">00</div>
+            <div class="time-label">Minutes</div>
+          </div>
+          <div class="time-card">
+            <div class="time-number" id="seconds">00</div>
+            <div class="time-label">Seconds</div>
+          </div>
+        </div>
+
+        <!-- Birthday Celebration Banner (Activates when countdown finishes or test button is clicked) -->
+        <div class="celebration-banner" id="celebrationBanner">
+          <h3 class="gold-glow">🎉 HAPPY BIRTHDAY MY GORGEOUS DIVYA! 🥳</h3>
+          <p class="section-subtitle">Today the stars shine a little brighter because it's your day! 💖</p>
+        </div>
+
+        <div style="margin-top: 1.5rem;">
+          <button class="btn btn-secondary" id="previewCelebrationBtn" style="font-size: 0.9rem;">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> Celebrate Now Mode 🎉
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       3. PERSONALIZED BIRTHDAY LETTER FOR DIVYA
+       ======================================================================= -->
+  <section class="section-wrapper letter-section" id="letter">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fa-solid fa-heart"></i> From My Heart to Yours</span>
+        <h2 class="section-title glow-text">A Love Letter for Divya 💌</h2>
+        <p class="section-subtitle">Words will never be enough, but here is a piece of my heart poured out just for you.</p>
+      </div>
+
+      <div class="envelope-wrapper">
+        <!-- Interactive Envelope Front -->
+        <div class="envelope-card glass-card" id="envelopeCard">
+          <h3 class="romantic-font" style="font-size: 2.4rem; color: #fff; margin-bottom: 0.5rem;">
+            For the Girl Who Owns My Heart 💕
+          </h3>
+          <p style="color: var(--accent-blush); font-size: 1rem;">
+            Sealed with infinite hugs, kisses, and promises.
+          </p>
+
+          <div class="envelope-seal-container" id="openLetterBtn" title="Click to break seal and read letter">
+            <div class="wax-seal">
+              D &amp; S
+            </div>
+            <div class="seal-prompt">
+              <i class="fa-solid fa-hand-pointer"></i> Tap the seal to open letter
+            </div>
+          </div>
+
+          <!-- Unfolded Romantic Letter -->
+          <article class="letter-paper" id="letterPaper">
+            <div class="letter-watermark">Forever</div>
+            <div class="letter-header">
+              <div class="letter-salutation">My Dearest Divya,</div>
+              <div class="letter-date">On Your Most Special Day ✨</div>
+            </div>
+
+            <div class="letter-body">
+              <p>
+                Happy Birthday to my favorite human in the entire universe.
+              </p>
+              <p>
+                From the moment you walked into my life, everything became so much brighter, softer, and more magical. You have this rare and breathtaking way of lighting up any room simply by being in it. Your laughter is my favorite melody, your smile is my daily peace, and your gentle soul inspires me more than you could ever imagine.
+              </p>
+              <span class="letter-highlight">
+                "In a world of billions of people, my heart chose you, and it will choose you again and again."
+              </span>
+              <p>
+                I treasure every little memory we've shared—the silly inside jokes that leave us breathless with laughter, our cozy dates, the long heart-to-heart conversations under the stars, and even the quiet moments where just being near you feels like the ultimate blessing.
+              </p>
+              <p>
+                On your birthday, my biggest wish is for your life to be overflowing with the same pure joy, unconditional love, and warmth that you give so effortlessly to everyone around you. May every dream you whisper to the stars come true, and may you always know that no matter where life leads us, I will always be right beside you, cheering for you and loving you with all that I am.
+              </p>
+            </div>
+
+            <div class="letter-closing">
+              <div class="letter-signoff">Forever and always yours,</div>
+              <div class="letter-signature">With all my love ❤️</div>
+            </div>
+
+            <div class="letter-actions">
+              <button class="btn btn-secondary" id="copyLetterBtn" style="color: #662757; border-color: #d62258;">
+                <i class="fa-regular fa-copy"></i> Copy Love Note
+              </button>
+              <button class="btn btn-primary" id="foldLetterBtn">
+                <i class="fa-solid fa-envelope"></i> Fold Letter Back
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       7. INTERACTIVE BIRTHDAY CAKE & WISH BUTTON
+       ======================================================================= -->
+  <section class="section-wrapper cake-section" id="cake">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Make a Wish</span>
+        <h2 class="section-title glow-text">Blow Out the Candles 🎂</h2>
+        <p class="section-subtitle">Every candle represents a wish waiting to be granted. Blow them out and whisper your secret wish!</p>
+      </div>
+
+      <div class="glass-card cake-stage">
+        <!-- Interactive 3-Tier Illustrated Cake -->
+        <div class="cake-container">
+          <!-- Candles on Top Tier -->
+          <div class="candles-row">
+            <div class="candle" title="Tap candle to blow it out">
+              <div class="flame"></div>
+              <div class="smoke"></div>
+            </div>
+            <div class="candle" title="Tap candle to blow it out">
+              <div class="flame"></div>
+              <div class="smoke"></div>
+            </div>
+            <div class="candle" title="Tap candle to blow it out">
+              <div class="flame"></div>
+              <div class="smoke"></div>
+            </div>
+          </div>
+
+          <!-- Top Tier -->
+          <div class="cake-tier-top"></div>
+          <!-- Middle Tier -->
+          <div class="cake-tier-middle"></div>
+          <!-- Bottom Tier -->
+          <div class="cake-tier-bottom"></div>
+          <!-- Plate Base -->
+          <div class="cake-plate"></div>
+        </div>
+
+        <p class="cake-instructions">
+          Tap each candle to blow it out, or click the button below! 🕯️✨
+        </p>
+
+        <div class="cake-btn-group">
+          <button class="btn btn-primary" id="blowCandlesBtn">
+            <i class="fa-solid fa-wind"></i> Blow All Candles 🌬️
+          </button>
+          <button class="btn btn-secondary" id="relightCandlesBtn">
+            <i class="fa-solid fa-fire-flame-curved"></i> Relight Candles 🕯️
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Secret Birthday Wish Modal -->
+  <div class="modal-overlay" id="wishModal">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="closeWishModal" aria-label="Close modal">&times;</button>
+      <div style="font-size: 3rem; margin-bottom: 0.5rem;">🌟</div>
+      <h3 class="romantic-font glow-text" style="font-size: 2.8rem; margin-bottom: 0.5rem;">
+        Divya's Secret Birthday Wish
+      </h3>
+      <p style="color: var(--accent-blush);">
+        Close your eyes, make a heartfelt wish for this year, and type it below. The stars will keep it safe forever. 💫
+      </p>
+      <textarea class="wish-input" id="wishInput" placeholder="My secret birthday wish is..."></textarea>
+      <div>
+        <button class="btn btn-gold" id="sendWishBtn">
+          <i class="fa-solid fa-paper-plane"></i> Send Wish to the Stars 🌠
+        </button>
+      </div>
+      <div class="wish-feedback" id="wishFeedback">
+        ✨ Your wish has been whispered to the universe! It is destined to come true. 💖
+      </div>
+    </div>
+  </div>
+
+  <!-- =======================================================================
+       4. PHOTO GALLERY (OUR CHERISHED MEMORIES)
+       ======================================================================= -->
+  <section class="section-wrapper gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fa-regular fa-image"></i> Precious Moments</span>
+        <h2 class="section-title glow-text">Our Memory Lane 📸</h2>
+        <p class="section-subtitle">A collection of moments frozen in time, each one holding a special place in my heart.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- Memory Card 1 -->
+        <article class="polaroid-card">
+          <div class="polaroid-img-wrapper">
+            <!-- Replace with your personal photo (e.g. assets/images/photo1.jpg) or keep illustrated memory -->
+            <img src="assets/images/photo1.svg" data-user-photo="assets/images/photo1.jpg" alt="Where Our Story Began" class="polaroid-img" loading="lazy">
+          </div>
+          <div class="polaroid-caption">
+            <h3 class="polaroid-title">Where It All Began 🌸</h3>
+            <div class="polaroid-date"><i class="fa-regular fa-calendar-days"></i> The Day Everything Changed</div>
+          </div>
+          <div class="polaroid-actions">
+            <button class="like-btn" title="Send a heart"><i class="fa-regular fa-heart"></i> <span class="like-count">108</span></button>
+            <span class="view-btn">View Memory <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </article>
+
+        <!-- Memory Card 2 -->
+        <article class="polaroid-card">
+          <div class="polaroid-img-wrapper">
+            <!-- Replace with your personal photo (e.g. assets/images/photo2.jpg) or keep illustrated memory -->
+            <img src="assets/images/photo2.svg" data-user-photo="assets/images/photo2.jpg" alt="Your Radiant Smile" class="polaroid-img" loading="lazy">
+          </div>
+          <div class="polaroid-caption">
+            <h3 class="polaroid-title">Your Radiant Smile 💖</h3>
+            <div class="polaroid-date"><i class="fa-regular fa-calendar-days"></i> That Smile I Adore</div>
+          </div>
+          <div class="polaroid-actions">
+            <button class="like-btn" title="Send a heart"><i class="fa-regular fa-heart"></i> <span class="like-count">142</span></button>
+            <span class="view-btn">View Memory <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </article>
+
+        <!-- Memory Card 3 -->
+        <article class="polaroid-card">
+          <div class="polaroid-img-wrapper">
+            <!-- Replace with your personal photo (e.g. assets/images/photo3.jpg) or keep illustrated memory -->
+            <img src="assets/images/photo3.svg" data-user-photo="assets/images/photo3.jpg" alt="Coffee Dates & Talks" class="polaroid-img" loading="lazy">
+          </div>
+          <div class="polaroid-caption">
+            <h3 class="polaroid-title">Cozy Coffee Dates ☕</h3>
+            <div class="polaroid-date"><i class="fa-regular fa-calendar-days"></i> Countless Hours of Talking</div>
+          </div>
+          <div class="polaroid-actions">
+            <button class="like-btn" title="Send a heart"><i class="fa-regular fa-heart"></i> <span class="like-count">99</span></button>
+            <span class="view-btn">View Memory <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </article>
+
+        <!-- Memory Card 4 -->
+        <article class="polaroid-card">
+          <div class="polaroid-img-wrapper">
+            <!-- Replace with your personal photo (e.g. assets/images/photo4.jpg) or keep illustrated memory -->
+            <img src="assets/images/photo4.svg" data-user-photo="assets/images/photo4.jpg" alt="Under the Stars" class="polaroid-img" loading="lazy">
+          </div>
+          <div class="polaroid-caption">
+            <h3 class="polaroid-title">Under the Stars 🌌</h3>
+            <div class="polaroid-date"><i class="fa-regular fa-calendar-days"></i> Magical Quiet Evenings</div>
+          </div>
+          <div class="polaroid-actions">
+            <button class="like-btn" title="Send a heart"><i class="fa-regular fa-heart"></i> <span class="like-count">210</span></button>
+            <span class="view-btn">View Memory <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </article>
+
+        <!-- Memory Card 5 -->
+        <article class="polaroid-card">
+          <div class="polaroid-img-wrapper">
+            <!-- Replace with your personal photo (e.g. assets/images/photo5.jpg) or keep illustrated memory -->
+            <img src="assets/images/photo5.svg" data-user-photo="assets/images/photo5.jpg" alt="Silly Laughs" class="polaroid-img" loading="lazy">
+          </div>
+          <div class="polaroid-caption">
+            <h3 class="polaroid-title">Our Goofy Laughs 🥰</h3>
+            <div class="polaroid-date"><i class="fa-regular fa-calendar-days"></i> Pure Unfiltered Joy</div>
+          </div>
+          <div class="polaroid-actions">
+            <button class="like-btn" title="Send a heart"><i class="fa-regular fa-heart"></i> <span class="like-count">185</span></button>
+            <span class="view-btn">View Memory <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </article>
+
+        <!-- Memory Card 6 -->
+        <article class="polaroid-card">
+          <div class="polaroid-img-wrapper">
+            <!-- Replace with your personal photo (e.g. assets/images/photo6.jpg) or keep illustrated memory -->
+            <img src="assets/images/photo6.svg" data-user-photo="assets/images/photo6.jpg" alt="Forever & Always" class="polaroid-img" loading="lazy">
+          </div>
+          <div class="polaroid-caption">
+            <h3 class="polaroid-title">Forever &amp; Always ♾️</h3>
+            <div class="polaroid-date"><i class="fa-regular fa-calendar-days"></i> To A Lifetime With You</div>
+          </div>
+          <div class="polaroid-actions">
+            <button class="like-btn" title="Send a heart"><i class="fa-regular fa-heart"></i> <span class="like-count">365</span></button>
+            <span class="view-btn">View Memory <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Lightbox Modal -->
+  <div class="lightbox-overlay" id="lightboxModal">
+    <div class="lightbox-content">
+      <button class="modal-close-btn" id="closeLightbox" aria-label="Close photo view">&times;</button>
+      <div class="lightbox-img-wrapper">
+        <img id="lightboxImg" src="assets/images/photo1.svg" alt="Full size memory view">
+      </div>
+      <div class="lightbox-details">
+        <h3 class="lightbox-title" id="lightboxTitle">Memory Title</h3>
+        <p class="lightbox-desc" id="lightboxDesc">Caption and date</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- =======================================================================
+       8. VIDEO MEMORIES SECTION
+       ======================================================================= -->
+  <section class="section-wrapper video-section" id="video">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fa-solid fa-video"></i> Motion Picture</span>
+        <h2 class="section-title glow-text">Our Journey in Motion 🎥</h2>
+        <p class="section-subtitle">A little video reel capturing the laughter, sweet moments, and joy we share together.</p>
+      </div>
+
+      <div class="video-frame">
+        <div class="video-wrapper">
+          <video class="video-element" id="memoryVideo" controls poster="assets/images/video-poster.svg" preload="metadata">
+            <source src="assets/videos/memory-video.mp4" type="video/mp4">
+            <p>Your browser does not support the video tag.</p>
+          </video>
+        </div>
+        <div class="video-caption-bar">
+          <div class="video-caption-text">
+            "Every frame with you is my favorite memory" ❤️
+          </div>
+          <div class="video-badge">
+            <i class="fa-solid fa-sparkles"></i> Dedicated to Divya
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       9. SURPRISE GIFT REVEAL WITH CONFETTI
+       ======================================================================= -->
+  <section class="section-wrapper gift-section" id="gift">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fa-solid fa-gift"></i> Birthday Treasure</span>
+        <h2 class="section-title glow-text">A Special Surprise For Divya 🎁</h2>
+        <p class="section-subtitle">What's inside the birthday box? Tap to untie the ribbon and find out!</p>
+      </div>
+
+      <div class="glass-card gift-stage">
+        <!-- 3D Interactive Bouncing Gift Box -->
+        <div class="gift-box-container" id="giftBox" title="Tap to open your birthday surprise!">
+          <div class="gift-box">
+            <div class="gift-bow">🎀</div>
+            <div class="gift-lid">
+              <div class="gift-lid-ribbon"></div>
+            </div>
+            <div class="gift-body">
+              <div class="gift-ribbon-v"></div>
+              <div class="gift-ribbon-h"></div>
+            </div>
+          </div>
+        </div>
+
+        <p class="gift-instruction" id="giftInstruction">
+          Tap the gift box to unwrap your surprise! 🎁✨
+        </p>
+
+        <!-- Revealed Content: Golden Love Coupons -->
+        <div class="revealed-surprise" id="revealedSurprise">
+          <h3 class="romantic-font glow-text" style="font-size: 2.8rem; margin-bottom: 0.5rem;">
+            Divya's VIP Golden Love Vouchers 🎫💖
+          </h3>
+          <p style="color: var(--accent-blush); max-width: 650px; margin: 0 auto;">
+            These exclusive, non-expiring coupons are guaranteed and redeemable at any time with 100% unconditional love!
+          </p>
+
+          <div class="coupon-grid">
+            <!-- Coupon 1 -->
+            <div class="love-coupon">
+              <div class="coupon-badge"><i class="fa-solid fa-utensils"></i> VIP Date Pass</div>
+              <h4 class="coupon-title">Romantic Candlelight Dinner 🕯️</h4>
+              <p class="coupon-desc">You choose any restaurant, any cuisine, any date—all on me with desserts included!</p>
+              <button class="coupon-redeem-btn"><i class="fa-solid fa-ticket"></i> Redeem Coupon</button>
+            </div>
+
+            <!-- Coupon 2 -->
+            <div class="love-coupon">
+              <div class="coupon-badge"><i class="fa-solid fa-hand-holding-heart"></i> Warmth & Comfort</div>
+              <h4 class="coupon-title">Unlimited Cuddles & Hugs 🫂</h4>
+              <p class="coupon-desc">Valid whenever you feel tired, happy, or simply want to be held tight. Never expires.</p>
+              <button class="coupon-redeem-btn"><i class="fa-solid fa-ticket"></i> Redeem Coupon</button>
+            </div>
+
+            <!-- Coupon 3 -->
+            <div class="love-coupon">
+              <div class="coupon-badge"><i class="fa-solid fa-dove"></i> Peace & Harmony</div>
+              <h4 class="coupon-title">Win Any Argument Pass 🕊️</h4>
+              <p class="coupon-desc">Play this card anytime, and I will instantly admit you're right with a sweet apology!</p>
+              <button class="coupon-redeem-btn"><i class="fa-solid fa-ticket"></i> Redeem Coupon</button>
+            </div>
+
+            <!-- Coupon 4 -->
+            <div class="love-coupon">
+              <div class="coupon-badge"><i class="fa-solid fa-ice-cream"></i> Sweet Adventure</div>
+              <h4 class="coupon-title">Midnight Drive & Ice Cream 🍦</h4>
+              <p class="coupon-desc">A late-night drive playing our favorite playlist and hunting down your favorite ice cream.</p>
+              <button class="coupon-redeem-btn"><i class="fa-solid fa-ticket"></i> Redeem Coupon</button>
+            </div>
+
+            <!-- Coupon 5 -->
+            <div class="love-coupon">
+              <div class="coupon-badge"><i class="fa-solid fa-crown"></i> Royal Treatment</div>
+              <h4 class="coupon-title">Queen For a Day 👑</h4>
+              <p class="coupon-desc">Full 24 hours of pampering, massage, treats, and serving you like the queen you are!</p>
+              <button class="coupon-redeem-btn"><i class="fa-solid fa-ticket"></i> Redeem Coupon</button>
+            </div>
+
+            <!-- Coupon 6 -->
+            <div class="love-coupon">
+              <div class="coupon-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Wildcard Wish</div>
+              <h4 class="coupon-title">One Secret Wish Granted ✨</h4>
+              <p class="coupon-desc">Name anything you wish for in this world, and I promise to make it happen for you.</p>
+              <button class="coupon-redeem-btn"><i class="fa-solid fa-ticket"></i> Redeem Coupon</button>
+            </div>
+          </div>
+
+          <div>
+            <button class="btn btn-gold" id="claimAllCouponsBtn">
+              <i class="fa-solid fa-wallet"></i> Claim &amp; Save All Coupons to Divya's Wallet 💖
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       11. JAR OF REASONS WHY I LOVE YOU
+       ======================================================================= -->
+  <section class="section-wrapper reasons-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fa-solid fa-sparkles"></i> Infinite Love</span>
+        <h2 class="section-title glow-text">Reasons Why I Love You 🌸</h2>
+        <p class="section-subtitle">A little jar containing a few of the million reasons you mean the world to me.</p>
+      </div>
+
+      <div class="glass-card jar-wrapper">
+        <div style="font-size: 3.5rem;">💌</div>
+        <div class="love-note-card" id="loveReasonCard">
+          "The way your eyes sparkle when you laugh genuinely at my silly jokes. ✨"
+        </div>
+        <button class="btn btn-primary" id="nextReasonBtn">
+          <i class="fa-solid fa-heart"></i> Pull Another Love Reason 💕
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       10. FOOTER & ROMANTIC OUTRO
+       ======================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-heart">💖</div>
+      <div class="footer-quote">"Happy Birthday, My Divya. Forever and Always."</div>
+      <p class="footer-copyright">
+        Crafted with all my heart, love, and soul for you. | &copy; 2026 With Eternal Love
+      </p>
+      <a href="#hero" class="back-to-top" title="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>

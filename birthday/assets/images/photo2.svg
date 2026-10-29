@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sky2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3d1252"/>
+      <stop offset="50%" stop-color="#741f6a"/>
+      <stop offset="100%" stop-color="#c43d78"/>
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff8da1"/>
+      <stop offset="100%" stop-color="#d62258"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#sky2)"/>
+  
+  <!-- Decorative Floral & Heart Ring -->
+  <circle cx="400" cy="270" r="180" fill="none" stroke="#ffb6c1" stroke-width="2" stroke-dasharray="8 6" opacity="0.6"/>
+  <circle cx="400" cy="270" r="160" fill="rgba(255, 255, 255, 0.05)"/>
+  
+  <!-- Golden Butterflies -->
+  <g fill="#ffd700" opacity="0.85">
+    <!-- Butterfly 1 -->
+    <path d="M260 160 Q 240 140 250 120 Q 270 135 265 155 Z M265 158 Q 280 145 285 160 Q 275 170 265 160 Z"/>
+    <!-- Butterfly 2 -->
+    <path d="M540 210 Q 560 190 550 170 Q 530 185 535 205 Z M535 208 Q 520 195 515 210 Q 525 220 535 210 Z"/>
+  </g>
+
+  <!-- Princess Crown & Heart Icon -->
+  <g transform="translate(400, 200) scale(1.4)">
+    <!-- Crown -->
+    <path d="M-30 -20 L -15 -45 L 0 -25 L 15 -45 L 30 -20 L 25 0 L -25 0 Z" fill="#ffd700" stroke="#ffae19" stroke-width="2"/>
+    <circle cx="-15" cy="-45" r="3" fill="#ff4d88"/>
+    <circle cx="0" cy="-25" r="3.5" fill="#fff"/>
+    <circle cx="15" cy="-45" r="3" fill="#ff4d88"/>
+  </g>
+  
+  <!-- Glowing Heart in Center -->
+  <g transform="translate(400, 290)">
+    <path d="M0 -30 C -25 -65, -70 -40, -70 5 C -70 45, 0 85, 0 85 C 0 85, 70 45, 70 5 C 70 -40, 25 -65, 0 -30 Z" fill="url(#roseGrad)" filter="drop-shadow(0 10px 20px rgba(214,34,88,0.5))"/>
+    <text x="0" y="20" font-family="'Dancing Script', cursive, serif" font-size="34" fill="#ffffff" font-weight="bold" text-anchor="middle">Divya</text>
+  </g>
+
+  <!-- Rose Petals falling -->
+  <path d="M200 350 C 210 330 230 340 225 360 C 220 370 200 365 200 350 Z" fill="#ff758c" opacity="0.8"/>
+  <path d="M580 320 C 590 300 610 310 605 330 C 600 340 580 335 580 320 Z" fill="#ff758c" opacity="0.8"/>
+  <path d="M490 420 C 500 405 515 415 510 428 C 505 435 490 430 490 420 Z" fill="#ff4d88" opacity="0.7"/>
+  <path d="M300 440 C 310 425 325 435 320 448 C 315 455 300 450 300 440 Z" fill="#ff4d88" opacity="0.7"/>
+
+  <text x="400" y="520" font-family="'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="24" fill="#ffd1dc" text-anchor="middle" letter-spacing="3">THAT SMILE WHICH HEALS MY WORLD 💖</text>
+</svg>
